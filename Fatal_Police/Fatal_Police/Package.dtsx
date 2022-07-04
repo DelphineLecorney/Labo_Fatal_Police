@@ -1,0 +1,2371 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/30/2022 7:39:31 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="-DEL-"
+  DTS:CreatorName="-DEL-\User"
+  DTS:DTSID="{A341904A-7F09-451B-B14F-1D3A94B12652}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{E2F5DEE6-CF4D-42B9-961F-355589D8CE85}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FORMA1305\TFTIC.Fatal_Police]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{631F49AE-06C6-4707-A683-B7FBAB33FE0F}"
+      DTS:ObjectName="FORMA1305\TFTIC.Fatal_Police">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=FORMA1305\TFTIC;Initial Catalog=Fatal_Police;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C8FB95FF-B2AF-4A0A-90E9-43C54C3A3E49}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2060"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\d.lecorney\OneDrive - TechnofuturTIC\Labo_Fatal_Police\fatal-police-shootings-data.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{FB3B4336-DFA8-4852-AD09-ABFAE91E506E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{D58C3329-5C3C-4EF0-9435-BE9A1EACB9F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="date"
+              DTS:DTSID="{6FC0C5B9-6A70-43F7-A9EE-06428097F724}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="manner_of_death"
+              DTS:DTSID="{A243F558-2F32-4F79-9D42-99E3224C318B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="armed"
+              DTS:DTSID="{E4B97E3B-3747-4D6D-B5BF-379CDF0775E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="age"
+              DTS:DTSID="{F6377E94-831D-4F97-A88E-7D597E52FD6E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gender"
+              DTS:DTSID="{26F392FF-B80B-4549-BDD9-60C69F2D105A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="race"
+              DTS:DTSID="{BFCB0D04-47CD-4BFE-858B-88EEF1AEBD43}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{CF02E0DE-7725-4045-9CF4-003F7AE8F8B5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="state"
+              DTS:DTSID="{C84D68B6-AA15-41B4-B137-E5CCFDA97AD1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="signs_of_mental_illness"
+              DTS:DTSID="{A2C26001-7143-44AE-B436-9B54E360C2CE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="threat_level"
+              DTS:DTSID="{E52F4390-EF74-4D70-90F4-9AFD076DBA8D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="flee"
+              DTS:DTSID="{8BDAB717-4233-4EEC-98F5-69EA159C70FE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="body_camera"
+              DTS:DTSID="{8A0A7A36-3753-4835-967C-9DC383FC6F5D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{47B622AD-4CB3-46F1-A522-43EB461AEEA2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{E938C485-94B1-4E30-9592-F805DD640EDB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="is_geocoding_exact"
+              DTS:DTSID="{145B281A-A6C5-4C71-8D41-E7356F497163}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2C39AD5D-E540-4443-A6CD-24EDCCB60BB5}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2060"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\d.lecorney\OneDrive - TechnofuturTIC\Labo_Fatal_Police\uscities.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;city&quot;"
+              DTS:DTSID="{B9297F4A-2AB4-489C-B26A-AC7D2ADF787A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;city_ascii&quot;"
+              DTS:DTSID="{EE3ADF7C-EBB3-45CF-B73B-D9BF20B83FEA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;state_id&quot;"
+              DTS:DTSID="{8765B9F5-8008-4291-8C6D-D91F6E032757}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;state_name&quot;"
+              DTS:DTSID="{AEF0FF93-9994-42CB-8260-B8EB9F8EE14F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;county_fips&quot;"
+              DTS:DTSID="{521B23D4-CA11-4051-A86E-30E2BAB15FFE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;county_name&quot;"
+              DTS:DTSID="{A41F77EC-9B14-4172-A8F5-EEFD333091B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;county_fips_all&quot;"
+              DTS:DTSID="{EC90F90C-809F-420C-A6BD-990DD52CA8A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;county_name_all&quot;"
+              DTS:DTSID="{C998CB3A-0952-44C5-BDD4-E2E708DC62E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;lat&quot;"
+              DTS:DTSID="{CC204D2E-6289-4323-8CB9-8D62C5AF90EF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;lng&quot;"
+              DTS:DTSID="{A9CD854A-4218-4A46-AEBC-61295FFC17DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;population&quot;"
+              DTS:DTSID="{EE933281-461F-408C-AC3A-1E6BF9C3A65B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;density&quot;"
+              DTS:DTSID="{F5B73B3A-F747-462A-90A8-A854B2A002C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;source&quot;"
+              DTS:DTSID="{B7C8B4DC-28AB-412F-85D7-0CD05C159865}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;military&quot;"
+              DTS:DTSID="{5F89376F-2788-4673-B926-921CD92E575C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;incorporated&quot;"
+              DTS:DTSID="{CB562468-071C-426C-82B1-3BF3CE256A35}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;timezone&quot;"
+              DTS:DTSID="{0AE35213-A38B-4FD2-92DE-1DD8FF8D3B34}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;ranking&quot;"
+              DTS:DTSID="{91ADE306-4620-4CB2-9CF8-EB811C737617}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;zips&quot;"
+              DTS:DTSID="{B323E9DF-EAF0-4D12-BE26-37C794AFC13B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;id&quot;"
+              DTS:DTSID="{13D93F59-EFDF-43D0-85D6-9351CA29E0A4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{FD2C5DCA-9A93-4660-AA5B-E5714A2E5120}"
+      DTS:ObjectName="Gestionnaire de connexions Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\d.lecorney\OneDrive - TechnofuturTIC\Labo_Fatal_Police\Ethnicity Data USA.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Fatal_Police"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{432B23CF-E004-4759-B1FA-810EE8952868}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Fatal_Police"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Fatal_Police\Fatal_Police_Shooting"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source du fichier plat"
+              localeId="2060"
+              name="Fatal_Police_Shooting"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fatal_Police\Fatal_Police_Shooting.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[id]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[name]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[date]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[date]"
+                      name="date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[manner_of_death]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[manner_of_death]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[manner_of_death]"
+                      name="manner_of_death"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[armed]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[armed]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[armed]"
+                      name="armed"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[age]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[age]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[age]"
+                      name="age"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[gender]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[gender]"
+                      name="gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[race]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[race]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[race]"
+                      name="race"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[city]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[city]"
+                      name="city"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[state]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[state]"
+                      name="state"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[signs_of_mental_illness]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[signs_of_mental_illness]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[signs_of_mental_illness]"
+                      name="signs_of_mental_illness"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[threat_level]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[threat_level]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[threat_level]"
+                      name="threat_level"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[flee]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[flee]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[flee]"
+                      name="flee"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[body_camera]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[body_camera]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[body_camera]"
+                      name="body_camera"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[longitude]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[longitude]"
+                      name="longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[latitude]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[latitude]"
+                      name="latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[is_geocoding_exact]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[is_geocoding_exact]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[is_geocoding_exact]"
+                      name="is_geocoding_exact"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="date" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[manner_of_death]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="manner_of_death" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[armed]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="armed" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="age" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="gender" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[race]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="race" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="state" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[signs_of_mental_illness]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="signs_of_mental_illness" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[threat_level]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="threat_level" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[flee]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="flee" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[body_camera]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="body_camera" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].ExternalColumns[is_geocoding_exact]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="is_geocoding_exact" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie d'erreur de source de fichier plat]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fatal_Police\Source Excel"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Source Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source Excel"
+              name="Source Excel"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">Sheet1$</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mappage des paramètres de la commande SQL en variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fatal_Police\Source Excel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gestionnaire de connexions Excel]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestionnaire de connexions Excel]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel]"
+                  name="Sortie de source Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].Columns[State]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[State]"
+                      length="255"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].Columns[State]"
+                      name="State"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].Columns[Total population]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Total population]"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].Columns[Total population]"
+                      name="Total population"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].Columns[White]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[White]"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].Columns[White]"
+                      name="White"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].Columns[Black]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Black]"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].Columns[Black]"
+                      name="Black"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].Columns[Hispanic]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Hispanic]"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].Columns[Hispanic]"
+                      name="Hispanic"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].Columns[Asian]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Asian]"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].Columns[Asian]"
+                      name="Asian"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].Columns[American Indian]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[American Indian]"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].Columns[American Indian]"
+                      name="American Indian"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="255"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Total population]"
+                      dataType="r8"
+                      name="Total population" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[White]"
+                      dataType="r8"
+                      name="White" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Black]"
+                      dataType="r8"
+                      name="Black" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Hispanic]"
+                      dataType="r8"
+                      name="Hispanic" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[Asian]"
+                      dataType="r8"
+                      name="Asian" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel].ExternalColumns[American Indian]"
+                      dataType="r8"
+                      name="American Indian" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[State]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[State]"
+                      name="State" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Total population]"
+                      dataType="r8"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Total population]"
+                      name="Total population" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[White]"
+                      dataType="r8"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[White]"
+                      name="White" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Black]"
+                      dataType="r8"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Black]"
+                      name="Black" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Hispanic]"
+                      dataType="r8"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Hispanic]"
+                      name="Hispanic" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Asian]"
+                      dataType="r8"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[Asian]"
+                      name="Asian" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[American Indian]"
+                      dataType="r8"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[American Indian]"
+                      name="American Indian" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fatal_Police\Source Excel.Outputs[Sortie d'erreur de source Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fatal_Police\Unir tout"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Unir tout;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Combine des lignes de plusieurs flux de données sans effectuer de tri. Par exemple, rajoutez des lignes à un flux de données après correction des erreurs. Si le tri est important, nous recommandons l'utilisation de la transformation de fusion."
+              name="Unir tout"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1]"
+                  name="Unir tout entrée 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="id"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="name"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[name]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[name]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="date"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[manner_of_death]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="manner_of_death"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[manner_of_death]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[manner_of_death]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[armed]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="armed"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[armed]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[armed]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="age"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[age]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[age]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="gender"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[gender]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[gender]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[race]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="race"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[race]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[race]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="city"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[city]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[city]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="state"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[state]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[state]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[signs_of_mental_illness]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="signs_of_mental_illness"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[signs_of_mental_illness]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[signs_of_mental_illness]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[threat_level]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="threat_level"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[threat_level]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[threat_level]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[flee]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="flee"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[flee]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[flee]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[body_camera]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="body_camera"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[body_camera]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[body_camera]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="longitude"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[longitude]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[longitude]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="latitude"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[latitude]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[latitude]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1].Columns[is_geocoding_exact]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="is_geocoding_exact"
+                      lineageId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat].Columns[is_geocoding_exact]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[is_geocoding_exact]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Fatal_Police\Unir tout.Inputs[Entrée Union All 1]"
+                  hasSideEffects="true"
+                  name="Entrée Union All 1">
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Fatal_Police\Unir tout.Inputs[Entrée Union All 2]"
+                  hasSideEffects="true"
+                  name="Entrée Union All 2">
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Fatal_Police\Unir tout.Inputs[Entrée Union All 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Entrée Union All 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1]"
+                  name="Unir tout sortie 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[name]"
+                      name="name" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[date]"
+                      name="date" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[manner_of_death]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[manner_of_death]"
+                      name="manner_of_death" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[armed]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[armed]"
+                      name="armed" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[age]"
+                      name="age" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[gender]"
+                      name="gender" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[race]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[race]"
+                      name="race" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[city]"
+                      name="city" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[state]"
+                      name="state" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[signs_of_mental_illness]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[signs_of_mental_illness]"
+                      name="signs_of_mental_illness" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[threat_level]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[threat_level]"
+                      name="threat_level" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[flee]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[flee]"
+                      name="flee" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[body_camera]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[body_camera]"
+                      name="body_camera" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[longitude]"
+                      name="longitude" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[latitude]"
+                      name="latitude" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[is_geocoding_exact]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Unir tout.Outputs[Unir tout sortie 1].Columns[is_geocoding_exact]"
+                      name="is_geocoding_exact" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fatal_Police\Uscities"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source du fichier plat"
+              localeId="2060"
+              name="Uscities"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fatal_Police\Uscities.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;city&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;city&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;city&quot;]"
+                      name="&quot;city&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;city_ascii&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;city_ascii&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;city_ascii&quot;]"
+                      name="&quot;city_ascii&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;state_id&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;state_id&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;state_id&quot;]"
+                      name="&quot;state_id&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;state_name&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;state_name&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;state_name&quot;]"
+                      name="&quot;state_name&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;county_fips&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;county_fips&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;county_fips&quot;]"
+                      name="&quot;county_fips&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;county_name&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;county_name&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;county_name&quot;]"
+                      name="&quot;county_name&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;county_fips_all&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;county_fips_all&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;county_fips_all&quot;]"
+                      name="&quot;county_fips_all&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;county_name_all&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;county_name_all&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;county_name_all&quot;]"
+                      name="&quot;county_name_all&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;lat&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;lat&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;lat&quot;]"
+                      name="&quot;lat&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;lng&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;lng&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;lng&quot;]"
+                      name="&quot;lng&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;population&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;population&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;population&quot;]"
+                      name="&quot;population&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;density&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;density&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;density&quot;]"
+                      name="&quot;density&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;source&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;source&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;source&quot;]"
+                      name="&quot;source&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;military&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;military&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;military&quot;]"
+                      name="&quot;military&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;incorporated&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;incorporated&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;incorporated&quot;]"
+                      name="&quot;incorporated&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;timezone&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;timezone&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;timezone&quot;]"
+                      name="&quot;timezone&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;ranking&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;ranking&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;ranking&quot;]"
+                      name="&quot;ranking&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;zips&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;zips&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;zips&quot;]"
+                      name="&quot;zips&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;id&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;id&quot;]"
+                      length="50"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].Columns[&quot;id&quot;]"
+                      name="&quot;id&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;city&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;city&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;city_ascii&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;city_ascii&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;state_id&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;state_id&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;state_name&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;state_name&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;county_fips&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;county_fips&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;county_name&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;county_name&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;county_fips_all&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;county_fips_all&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;county_name_all&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;county_name_all&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;lat&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;lat&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;lng&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;lng&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;population&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;population&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;density&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;density&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;source&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;source&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;military&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;military&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;incorporated&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;incorporated&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;timezone&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;timezone&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;ranking&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;ranking&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;zips&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;zips&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat].ExternalColumns[&quot;id&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;id&quot;" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Fatal_Police\Uscities.Outputs[Sortie d'erreur de source de fichier plat]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fatal_Police\Uscities.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fatal_Police\Uscities.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Fatal_Police.Paths[Sortie de source de fichier plat]"
+              endId="Package\Fatal_Police\Unir tout.Inputs[Unir tout entrée 1]"
+              name="Sortie de source de fichier plat"
+              startId="Package\Fatal_Police\Fatal_Police_Shooting.Outputs[Sortie de source de fichier plat]" />
+            <path
+              refId="Package\Fatal_Police.Paths[Sortie de source de fichier plat1]"
+              endId="Package\Fatal_Police\Unir tout.Inputs[Entrée Union All 1]"
+              name="Sortie de source de fichier plat"
+              startId="Package\Fatal_Police\Uscities.Outputs[Sortie de source de fichier plat]" />
+            <path
+              refId="Package\Fatal_Police.Paths[Sortie de source Excel]"
+              endId="Package\Fatal_Police\Unir tout.Inputs[Entrée Union All 2]"
+              name="Sortie de source Excel"
+              startId="Package\Fatal_Police\Source Excel.Outputs[Sortie de source Excel]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="135,42"
+          Id="Package\Fatal_Police"
+          TopLeft="254.5,171.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Fatal_Police">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Fatal_Police\Fatal_Police_Shooting"
+          TopLeft="88.5,69.5" />
+        <NodeLayout
+          Size="114,42"
+          Id="Package\Fatal_Police\Uscities"
+          TopLeft="358.5,69.5" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Fatal_Police\Source Excel"
+          TopLeft="556.5,75.5" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\Fatal_Police\Unir tout"
+          TopLeft="343,262" />
+        <EdgeLayout
+          Id="Package\Fatal_Police.Paths[Sortie de source de fichier plat]"
+          TopLeft="179.5,111.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="195.5,150.5"
+              Start="0,0"
+              End="195.5,143">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,94.1521739130435" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,94.1521739130435"
+                    Point2="0,98.1521739130435"
+                    Point3="4,98.1521739130435" />
+                  <mssgle:LineSegment
+                    End="191.5,98.1521739130435" />
+                  <mssgle:CubicBezierSegment
+                    Point1="191.5,98.1521739130435"
+                    Point2="195.5,98.1521739130435"
+                    Point3="195.5,102.152173913043" />
+                  <mssgle:LineSegment
+                    End="195.5,143" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fatal_Police.Paths[Sortie de source de fichier plat1]"
+          TopLeft="415.5,111.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.5,150.5"
+              Start="0,0"
+              End="-12.5,143">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,71.25"
+                    Point2="0,75.25"
+                    Point3="-4,75.25" />
+                  <mssgle:LineSegment
+                    End="-8.5,75.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8.5,75.25"
+                    Point2="-12.5,75.25"
+                    Point3="-12.5,79.25" />
+                  <mssgle:LineSegment
+                    End="-12.5,143" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fatal_Police.Paths[Sortie de source Excel]"
+          TopLeft="626,117.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-195,144.5"
+              Start="0,0"
+              End="-195,137">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,90.2391304347826" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,90.2391304347826"
+                    Point2="0,94.2391304347826"
+                    Point3="-4,94.2391304347826" />
+                  <mssgle:LineSegment
+                    End="-191,94.2391304347826" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-191,94.2391304347826"
+                    Point2="-195,94.2391304347826"
+                    Point3="-195,98.2391304347826" />
+                  <mssgle:LineSegment
+                    End="-195,137" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fatal_Police\Source Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
