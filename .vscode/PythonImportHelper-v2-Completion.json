@@ -1,0 +1,56 @@
+[
+    {
+        "label": "pyodbc",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyodbc",
+        "description": "pyodbc",
+        "detail": "pyodbc",
+        "documentation": {}
+    },
+    {
+        "label": "server",
+        "kind": 5,
+        "importPath": "secret",
+        "description": "secret",
+        "peekOfCode": "server = 'FORMA1305\\TFTIC' \ndatabase = 'Fatal_Police' \nusername = 'sa' \npassword = 'tftic@2012' \ncnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)",
+        "detail": "secret",
+        "documentation": {}
+    },
+    {
+        "label": "database",
+        "kind": 5,
+        "importPath": "secret",
+        "description": "secret",
+        "peekOfCode": "database = 'Fatal_Police' \nusername = 'sa' \npassword = 'tftic@2012' \ncnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)",
+        "detail": "secret",
+        "documentation": {}
+    },
+    {
+        "label": "username",
+        "kind": 5,
+        "importPath": "secret",
+        "description": "secret",
+        "peekOfCode": "username = 'sa' \npassword = 'tftic@2012' \ncnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)",
+        "detail": "secret",
+        "documentation": {}
+    },
+    {
+        "label": "password",
+        "kind": 5,
+        "importPath": "secret",
+        "description": "secret",
+        "peekOfCode": "password = 'tftic@2012' \ncnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)",
+        "detail": "secret",
+        "documentation": {}
+    },
+    {
+        "label": "cnxn",
+        "kind": 5,
+        "importPath": "secret",
+        "description": "secret",
+        "peekOfCode": "cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)",
+        "detail": "secret",
+        "documentation": {}
+    }
+]
