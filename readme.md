@@ -1,4 +1,4 @@
- ![](Images%5C1000_F_113822290_3NXf97pp8zJdCPNUau434WW7KeCKMpeG.jpg)
+ ![](Images%5CUs_States.jpg.jpg/200x150 "Us States")
 
 # \*\*\*\* 👮‍ US POLICE SHOOTING 👮‍ \*\*\*\*
 
@@ -21,33 +21,42 @@ with police.
 
 Implementation of a data analysis solution:
 
-
-1. Construction of a Data Warehouse according to a multi-dimensional model.
-2. Implementation of an ETL that will allow the addition of new data in the future data as it is added.
-3. Exploit the new model and its data to develop reports to answer the questions to answer the questions asked in the next slide.These reports can be built using tools such as Power BI, Qlik, Sense, Tableau, or Python.
-4. Creation of an AI to predict potential new cases.
+Construction of a Data Warehouse according to a multi-dimensional model.
+Implementation of an ETL that will allow the addition of new data in the future
+data as it is added.
+Exploit the new model and its data to develop reports to answer the questions
+to answer the questions asked in the next slide.
+These reports can be built using tools such as Power BI, Qlik, Sense, Tableau, or Python
+Creation of an AI to predict potential new cases.
 
 # Requirements
 
+To help understand the global situation of fatal police shootings in the
+police shootings in the United States.
+To help understand if there is discrimination of a certain ethnicity among
+others.
+To help understand if there are differences in different regions of the
+United States.
+To help understand if there is a change over time.
+To help understand if there are police blunders in the United States.
 
-1. To help understand the global situation of fatal police shootings in the police shootings in the United States.
-2. To help understand if there is discrimination of a certain ethnicity among others.
-3. To help understand if there are differences in different regions of the United [States.To](http://States.To) help understand if there is a change over time.
-4. To help understand if there are police blunders in the United States.
-
-
----
-
-# -------------Ce que je fais-------------
+# \*\*\*\* My Analys \*\*\*\*
 
 First, I import the modules that I think are necessary for the analysis of the files, it's always possible to import others afterwards.
 
-regarder les fichiers avec sweetviz
+Then, I import the files with pd.read (pandas) that I want to analyze, I will first read them with the Sweetviz module which gives me a first overview on the data like missing data for example or distinct, nulls....
 
-faire la base de données
+I'm doing a little info point to get my data type and target the nulls if that's the case. I get the number of columns and the number of entries.
 
-nettoyer les données
+I repeat the operation for the 3 files.
 
-faire un datawarehouse
+I then switch to SQL Server Management Studio to create my database which will contain my 3 files.
+Once my database is done, I create a project on Visual Studio to store the raw data from my 3 files.
 
-Data sources
+| <center>Logiciels Utilisés</center> | <center>Langages Utilisés</center> |
+|----|----|
+| Jupyter Notebook | Python - SQL |
+| SQL Management Studio | SQL |
+| Visual Studio | MSBuild |
+
+Thanks for reading !
