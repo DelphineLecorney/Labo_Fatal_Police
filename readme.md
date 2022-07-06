@@ -64,7 +64,6 @@ Once the connection is established, I do a .head() and an .info() to check the d
 | <center>Jupyter Notebook</center> | <center>Python - SQL</center> |
 | <center>SQL Management Studio</center> | <center>SQL</center> |
 | <center>Visual Studio</center> | <center> MSBuild </center> |
-| <br><br><br> |    |
-| <u>Thanks for reading</u> ! |    |
 
-
+<br><br><br>
+<u>Thanks for reading</u> !
