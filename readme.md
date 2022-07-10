@@ -41,21 +41,32 @@ To help understand if there are police blunders in the United States.
 
 # <center>\*\*\*\* <p style="color:#D06AB9">My Analys</p> \*\*\*\*</center>
 
-First, I import the modules that I think are necessary for the analysis of the files, it's always possible to import others afterwards.
+SSIS
 
-Then, I import the files with pd.read (pandas) that I want to analyze, I will first read them with the Sweetviz module which gives me a first overview on the data like missing data for example or distinct, nulls....
+To start, I create a database in SQL Management Studio named Fatal_Police.
 
-I'm doing a little info point to get my data type and target the nulls if that's the case. I get the number of columns and the number of entries.
+ETL
+
+I import the files fatal-police-shootings-data.csv, uscities.csv and Ethnicity Data USA.xlsx into SSIS, I create the necessary tables for these 3 files that I will send to my database.
+
+Once my database is filled, I create a notebook on Visual Studio Code to analyze the files.
+
+I import all the modules that I think are necessary for the analysis, it is always possible to import others afterwards.
+
+Then, with pd.excel (pandas) I get the files I want to analyze.
+
+I do a small info() to get my data type, a describe() to display the details, an isnull() to target the nulls if it is the case.
+
+I get the number of columns and the number of entries.
+The column "is_geocoding_exact" has only 11 False, I decide to delete it and "body-camera".
 
 I repeat the operation for the 3 files.
 
-I then switch to SQL Server Management Studio to create my database which will contain my 3 files.
-Once my database is done, I create a project on Visual Studio to store the raw data from my 3 files.
 From my 3 files, I build 3 tables of the same type that I put in my database.
-At the same time, I'm correcting various data types, like the county_fips_all column to text stream instead of Unicode.
+At the same time, I correct various data types, like the county_fips_all column to text stream instead of Unicode.
 
-I now create a SQL connection to display the database in my jupyter Notebook.
-Once the connection is established, I do a .head() and an .info() to check the data, their numbers...
+I now create an SQL connection to display the database in my jupyter notebook.
+Once the connection is established, I do a .head() and an .info() to check the data, its numbers...
 
 <br><br>
 

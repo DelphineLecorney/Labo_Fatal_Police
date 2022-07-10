@@ -1,5 +1,39 @@
 [
     {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "cnxn",
+        "importPath": "secret",
+        "description": "secret",
+        "isExtraImport": true,
+        "detail": "secret",
+        "documentation": {}
+    },
+    {
+        "label": "cndw",
+        "importPath": "secret",
+        "description": "secret",
+        "isExtraImport": true,
+        "detail": "secret",
+        "documentation": {}
+    },
+    {
         "label": "pyodbc",
         "kind": 6,
         "isExtraImport": true,
@@ -9,11 +43,173 @@
         "documentation": {}
     },
     {
+        "label": "sqlalchemy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "urllib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "urllib",
+        "description": "urllib",
+        "detail": "urllib",
+        "documentation": {}
+    },
+    {
+        "label": "df_fatal",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_fatal = pd.read_sql(\"SELECT * FROM [Fatal_Police_Shooting]\", cnxn)\ndf_fatal = df_fatal.drop(columns=[\"is_geocoding_exact\", \"body_camera\"])\ndf_fatal['date'].isnull().sum()\ndf_fatal['age'].isnull().sum()\ndf_fatal['age'] = df_fatal['age'].fillna(0)\ndf_fatal['age'].isnull().sum()\ndf_fatal['longitude'].isnull().sum()\ndf_fatal['longitude'] = df_fatal['longitude'].fillna(0)\ndf_fatal['longitude'].isnull().sum()\ndf_fatal['latitude'].isnull().sum()",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
+        "label": "df_fatal",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_fatal = df_fatal.drop(columns=[\"is_geocoding_exact\", \"body_camera\"])\ndf_fatal['date'].isnull().sum()\ndf_fatal['age'].isnull().sum()\ndf_fatal['age'] = df_fatal['age'].fillna(0)\ndf_fatal['age'].isnull().sum()\ndf_fatal['longitude'].isnull().sum()\ndf_fatal['longitude'] = df_fatal['longitude'].fillna(0)\ndf_fatal['longitude'].isnull().sum()\ndf_fatal['latitude'].isnull().sum()\ndf_fatal['latitude'] = df_fatal['latitude'].fillna(0)",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
+        "label": "df_fatal['age']",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_fatal['age'] = df_fatal['age'].fillna(0)\ndf_fatal['age'].isnull().sum()\ndf_fatal['longitude'].isnull().sum()\ndf_fatal['longitude'] = df_fatal['longitude'].fillna(0)\ndf_fatal['longitude'].isnull().sum()\ndf_fatal['latitude'].isnull().sum()\ndf_fatal['latitude'] = df_fatal['latitude'].fillna(0)\ndf_fatal['latitude'].isnull().sum()\ndf_fatal['name'] = df_fatal['name'].replace(np.nan, \"undetermined\")\ndf_fatal['name'].isnull().sum()",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
+        "label": "df_fatal['longitude']",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_fatal['longitude'] = df_fatal['longitude'].fillna(0)\ndf_fatal['longitude'].isnull().sum()\ndf_fatal['latitude'].isnull().sum()\ndf_fatal['latitude'] = df_fatal['latitude'].fillna(0)\ndf_fatal['latitude'].isnull().sum()\ndf_fatal['name'] = df_fatal['name'].replace(np.nan, \"undetermined\")\ndf_fatal['name'].isnull().sum()\ndf_fatal['manner_of_death'].isnull().sum()\ndf_fatal['armed'].isnull().sum()\ndf_fatal['armed'] = df_fatal['armed'].replace(np.nan, \"undetermined\")",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
+        "label": "df_fatal['latitude']",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_fatal['latitude'] = df_fatal['latitude'].fillna(0)\ndf_fatal['latitude'].isnull().sum()\ndf_fatal['name'] = df_fatal['name'].replace(np.nan, \"undetermined\")\ndf_fatal['name'].isnull().sum()\ndf_fatal['manner_of_death'].isnull().sum()\ndf_fatal['armed'].isnull().sum()\ndf_fatal['armed'] = df_fatal['armed'].replace(np.nan, \"undetermined\")\ndf_fatal['armed'].isnull().sum()\ndf_fatal['gender'].isnull().sum()\ndf_fatal['gender'] = df_fatal['gender'].replace(np.nan, \"undetermined\")",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
+        "label": "df_fatal['name']",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_fatal['name'] = df_fatal['name'].replace(np.nan, \"undetermined\")\ndf_fatal['name'].isnull().sum()\ndf_fatal['manner_of_death'].isnull().sum()\ndf_fatal['armed'].isnull().sum()\ndf_fatal['armed'] = df_fatal['armed'].replace(np.nan, \"undetermined\")\ndf_fatal['armed'].isnull().sum()\ndf_fatal['gender'].isnull().sum()\ndf_fatal['gender'] = df_fatal['gender'].replace(np.nan, \"undetermined\")\ndf_fatal['gender'].isnull().sum()\ndf_fatal['race'].isnull().sum()",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
+        "label": "df_fatal['armed']",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_fatal['armed'] = df_fatal['armed'].replace(np.nan, \"undetermined\")\ndf_fatal['armed'].isnull().sum()\ndf_fatal['gender'].isnull().sum()\ndf_fatal['gender'] = df_fatal['gender'].replace(np.nan, \"undetermined\")\ndf_fatal['gender'].isnull().sum()\ndf_fatal['race'].isnull().sum()\ndf_fatal['race'] = df_fatal['race'].replace('None', \"undetermined\")\ndf_fatal['race'] = df_fatal['race'].replace('N', \"undetermined\")\ndf_fatal['race'] = df_fatal['race'].replace('O', \"undetermined\")\ndf_fatal['race'].isnull().sum()",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
+        "label": "df_fatal['gender']",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_fatal['gender'] = df_fatal['gender'].replace(np.nan, \"undetermined\")\ndf_fatal['gender'].isnull().sum()\ndf_fatal['race'].isnull().sum()\ndf_fatal['race'] = df_fatal['race'].replace('None', \"undetermined\")\ndf_fatal['race'] = df_fatal['race'].replace('N', \"undetermined\")\ndf_fatal['race'] = df_fatal['race'].replace('O', \"undetermined\")\ndf_fatal['race'].isnull().sum()\ndf_fatal['city'].isnull().sum()\ndf_fatal['state'].isnull().sum()\ndf_fatal['signs_of_mental_illness'].isnull().sum()",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
+        "label": "df_fatal['race']",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_fatal['race'] = df_fatal['race'].replace('None', \"undetermined\")\ndf_fatal['race'] = df_fatal['race'].replace('N', \"undetermined\")\ndf_fatal['race'] = df_fatal['race'].replace('O', \"undetermined\")\ndf_fatal['race'].isnull().sum()\ndf_fatal['city'].isnull().sum()\ndf_fatal['state'].isnull().sum()\ndf_fatal['signs_of_mental_illness'].isnull().sum()\ndf_fatal['threat_level'].isnull().sum()\ndf_fatal['flee'].isnull().sum()\ndf_fatal['flee'] = df_fatal['flee'].replace(np.nan, \"undetermined\")",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
+        "label": "df_fatal['race']",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_fatal['race'] = df_fatal['race'].replace('N', \"undetermined\")\ndf_fatal['race'] = df_fatal['race'].replace('O', \"undetermined\")\ndf_fatal['race'].isnull().sum()\ndf_fatal['city'].isnull().sum()\ndf_fatal['state'].isnull().sum()\ndf_fatal['signs_of_mental_illness'].isnull().sum()\ndf_fatal['threat_level'].isnull().sum()\ndf_fatal['flee'].isnull().sum()\ndf_fatal['flee'] = df_fatal['flee'].replace(np.nan, \"undetermined\")\ndf_fatal['flee'].isnull().sum()",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
+        "label": "df_fatal['race']",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_fatal['race'] = df_fatal['race'].replace('O', \"undetermined\")\ndf_fatal['race'].isnull().sum()\ndf_fatal['city'].isnull().sum()\ndf_fatal['state'].isnull().sum()\ndf_fatal['signs_of_mental_illness'].isnull().sum()\ndf_fatal['threat_level'].isnull().sum()\ndf_fatal['flee'].isnull().sum()\ndf_fatal['flee'] = df_fatal['flee'].replace(np.nan, \"undetermined\")\ndf_fatal['flee'].isnull().sum()",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
+        "label": "df_fatal['flee']",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_fatal['flee'] = df_fatal['flee'].replace(np.nan, \"undetermined\")\ndf_fatal['flee'].isnull().sum()\ndf_us_cities = pd.read_sql(\"SELECT * FROM [us_cities]\", cnxn)\ndf_us_cities.isnull().sum().sum()\ndf_us_cities['zips'] = df_us_cities['zips'].fillna(0)\ndf_us_cities = df_us_cities.drop(columns=[\"military\", \"timezone\", \"incorporated\", \"source\", \"ranking\", \"city_ascii\", \"state_id\", \"county_name_all\", \"county_fips_all\"])\ndf_Etnicity = pd.read_sql(\"SELECT * FROM [Etnicity]\", cnxn)\ndf_Etnicity.isnull().sum().sum()\nfrom secret import cndw",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
+        "label": "df_us_cities",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_us_cities = pd.read_sql(\"SELECT * FROM [us_cities]\", cnxn)\ndf_us_cities.isnull().sum().sum()\ndf_us_cities['zips'] = df_us_cities['zips'].fillna(0)\ndf_us_cities = df_us_cities.drop(columns=[\"military\", \"timezone\", \"incorporated\", \"source\", \"ranking\", \"city_ascii\", \"state_id\", \"county_name_all\", \"county_fips_all\"])\ndf_Etnicity = pd.read_sql(\"SELECT * FROM [Etnicity]\", cnxn)\ndf_Etnicity.isnull().sum().sum()\nfrom secret import cndw\ndf_fatal.to_sql(\"df_fatal\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_us_cities.to_sql(\"df_us_cities\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_Etnicity.to_sql(\"df_Etnicity\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
+        "label": "df_us_cities['zips']",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_us_cities['zips'] = df_us_cities['zips'].fillna(0)\ndf_us_cities = df_us_cities.drop(columns=[\"military\", \"timezone\", \"incorporated\", \"source\", \"ranking\", \"city_ascii\", \"state_id\", \"county_name_all\", \"county_fips_all\"])\ndf_Etnicity = pd.read_sql(\"SELECT * FROM [Etnicity]\", cnxn)\ndf_Etnicity.isnull().sum().sum()\nfrom secret import cndw\ndf_fatal.to_sql(\"df_fatal\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_us_cities.to_sql(\"df_us_cities\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_Etnicity.to_sql(\"df_Etnicity\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
+        "label": "df_us_cities",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_us_cities = df_us_cities.drop(columns=[\"military\", \"timezone\", \"incorporated\", \"source\", \"ranking\", \"city_ascii\", \"state_id\", \"county_name_all\", \"county_fips_all\"])\ndf_Etnicity = pd.read_sql(\"SELECT * FROM [Etnicity]\", cnxn)\ndf_Etnicity.isnull().sum().sum()\nfrom secret import cndw\ndf_fatal.to_sql(\"df_fatal\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_us_cities.to_sql(\"df_us_cities\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_Etnicity.to_sql(\"df_Etnicity\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
+        "label": "df_Etnicity",
+        "kind": 5,
+        "importPath": "clean_dw",
+        "description": "clean_dw",
+        "peekOfCode": "df_Etnicity = pd.read_sql(\"SELECT * FROM [Etnicity]\", cnxn)\ndf_Etnicity.isnull().sum().sum()\nfrom secret import cndw\ndf_fatal.to_sql(\"df_fatal\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_us_cities.to_sql(\"df_us_cities\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_Etnicity.to_sql(\"df_Etnicity\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)",
+        "detail": "clean_dw",
+        "documentation": {}
+    },
+    {
         "label": "server",
         "kind": 5,
         "importPath": "secret",
         "description": "secret",
-        "peekOfCode": "server = 'FORMA1305\\TFTIC' \ndatabase = 'Fatal_Police' \nusername = 'sa' \npassword = 'tftic@2012' \ncnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)",
+        "peekOfCode": "server = 'FORMA1305\\TFTIC' \ndatabase = 'Fatal_Police' \nusername = 'sa' \npassword = 'tftic@2012' \ncnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERver='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)\nserver = 'FORMA1305\\TFTIC' \ndatabase = 'DW_Fatal_Police' \nusername = 'sa' \npassword = 'tftic@2012' \ncndw = sqlalchemy.create_engine(",
         "detail": "secret",
         "documentation": {}
     },
@@ -22,7 +218,7 @@
         "kind": 5,
         "importPath": "secret",
         "description": "secret",
-        "peekOfCode": "database = 'Fatal_Police' \nusername = 'sa' \npassword = 'tftic@2012' \ncnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)",
+        "peekOfCode": "database = 'Fatal_Police' \nusername = 'sa' \npassword = 'tftic@2012' \ncnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERver='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)\nserver = 'FORMA1305\\TFTIC' \ndatabase = 'DW_Fatal_Police' \nusername = 'sa' \npassword = 'tftic@2012' \ncndw = sqlalchemy.create_engine(\n               \"mssql+pyodbc:///?odbc_connect={}\".format(urllib.parse.quote_plus(\"DRIVER=ODBC Driver 17 for SQL Server;SERVER={0};PORT=1433;DATABASE={1};UID={2};PWD={3};TDS_Version=8.0;\".format(server, database, username, password))),",
         "detail": "secret",
         "documentation": {}
     },
@@ -31,7 +227,7 @@
         "kind": 5,
         "importPath": "secret",
         "description": "secret",
-        "peekOfCode": "username = 'sa' \npassword = 'tftic@2012' \ncnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)",
+        "peekOfCode": "username = 'sa' \npassword = 'tftic@2012' \ncnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERver='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)\nserver = 'FORMA1305\\TFTIC' \ndatabase = 'DW_Fatal_Police' \nusername = 'sa' \npassword = 'tftic@2012' \ncndw = sqlalchemy.create_engine(\n               \"mssql+pyodbc:///?odbc_connect={}\".format(urllib.parse.quote_plus(\"DRIVER=ODBC Driver 17 for SQL Server;SERVER={0};PORT=1433;DATABASE={1};UID={2};PWD={3};TDS_Version=8.0;\".format(server, database, username, password))),\n               echo=False)",
         "detail": "secret",
         "documentation": {}
     },
@@ -40,7 +236,7 @@
         "kind": 5,
         "importPath": "secret",
         "description": "secret",
-        "peekOfCode": "password = 'tftic@2012' \ncnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)",
+        "peekOfCode": "password = 'tftic@2012' \ncnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERver='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)\nserver = 'FORMA1305\\TFTIC' \ndatabase = 'DW_Fatal_Police' \nusername = 'sa' \npassword = 'tftic@2012' \ncndw = sqlalchemy.create_engine(\n               \"mssql+pyodbc:///?odbc_connect={}\".format(urllib.parse.quote_plus(\"DRIVER=ODBC Driver 17 for SQL Server;SERVER={0};PORT=1433;DATABASE={1};UID={2};PWD={3};TDS_Version=8.0;\".format(server, database, username, password))),\n               echo=False)",
         "detail": "secret",
         "documentation": {}
     },
@@ -49,7 +245,52 @@
         "kind": 5,
         "importPath": "secret",
         "description": "secret",
-        "peekOfCode": "cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)",
+        "peekOfCode": "cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERver='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)\nserver = 'FORMA1305\\TFTIC' \ndatabase = 'DW_Fatal_Police' \nusername = 'sa' \npassword = 'tftic@2012' \ncndw = sqlalchemy.create_engine(\n               \"mssql+pyodbc:///?odbc_connect={}\".format(urllib.parse.quote_plus(\"DRIVER=ODBC Driver 17 for SQL Server;SERVER={0};PORT=1433;DATABASE={1};UID={2};PWD={3};TDS_Version=8.0;\".format(server, database, username, password))),\n               echo=False)",
+        "detail": "secret",
+        "documentation": {}
+    },
+    {
+        "label": "server",
+        "kind": 5,
+        "importPath": "secret",
+        "description": "secret",
+        "peekOfCode": "server = 'FORMA1305\\TFTIC' \ndatabase = 'DW_Fatal_Police' \nusername = 'sa' \npassword = 'tftic@2012' \ncndw = sqlalchemy.create_engine(\n               \"mssql+pyodbc:///?odbc_connect={}\".format(urllib.parse.quote_plus(\"DRIVER=ODBC Driver 17 for SQL Server;SERVER={0};PORT=1433;DATABASE={1};UID={2};PWD={3};TDS_Version=8.0;\".format(server, database, username, password))),\n               echo=False)",
+        "detail": "secret",
+        "documentation": {}
+    },
+    {
+        "label": "database",
+        "kind": 5,
+        "importPath": "secret",
+        "description": "secret",
+        "peekOfCode": "database = 'DW_Fatal_Police' \nusername = 'sa' \npassword = 'tftic@2012' \ncndw = sqlalchemy.create_engine(\n               \"mssql+pyodbc:///?odbc_connect={}\".format(urllib.parse.quote_plus(\"DRIVER=ODBC Driver 17 for SQL Server;SERVER={0};PORT=1433;DATABASE={1};UID={2};PWD={3};TDS_Version=8.0;\".format(server, database, username, password))),\n               echo=False)",
+        "detail": "secret",
+        "documentation": {}
+    },
+    {
+        "label": "username",
+        "kind": 5,
+        "importPath": "secret",
+        "description": "secret",
+        "peekOfCode": "username = 'sa' \npassword = 'tftic@2012' \ncndw = sqlalchemy.create_engine(\n               \"mssql+pyodbc:///?odbc_connect={}\".format(urllib.parse.quote_plus(\"DRIVER=ODBC Driver 17 for SQL Server;SERVER={0};PORT=1433;DATABASE={1};UID={2};PWD={3};TDS_Version=8.0;\".format(server, database, username, password))),\n               echo=False)",
+        "detail": "secret",
+        "documentation": {}
+    },
+    {
+        "label": "password",
+        "kind": 5,
+        "importPath": "secret",
+        "description": "secret",
+        "peekOfCode": "password = 'tftic@2012' \ncndw = sqlalchemy.create_engine(\n               \"mssql+pyodbc:///?odbc_connect={}\".format(urllib.parse.quote_plus(\"DRIVER=ODBC Driver 17 for SQL Server;SERVER={0};PORT=1433;DATABASE={1};UID={2};PWD={3};TDS_Version=8.0;\".format(server, database, username, password))),\n               echo=False)",
+        "detail": "secret",
+        "documentation": {}
+    },
+    {
+        "label": "cndw",
+        "kind": 5,
+        "importPath": "secret",
+        "description": "secret",
+        "peekOfCode": "cndw = sqlalchemy.create_engine(\n               \"mssql+pyodbc:///?odbc_connect={}\".format(urllib.parse.quote_plus(\"DRIVER=ODBC Driver 17 for SQL Server;SERVER={0};PORT=1433;DATABASE={1};UID={2};PWD={3};TDS_Version=8.0;\".format(server, database, username, password))),\n               echo=False)",
         "detail": "secret",
         "documentation": {}
     }
