@@ -80,7 +80,7 @@ df_us_cities['zips'] = df_us_cities['zips'].fillna(0)
 
 df_us_cities.isnull().sum().sum()
 
-df_us_cities = df_us_cities.drop(columns=["military", "timezone", "incorporated", "source", "ranking", "city_ascii", "state_id", "county_name_all", "county_fips_all"])
+df_us_cities = df_us_cities.drop(columns=["military", "timezone", "incorporated", "source", "ranking", "city_ascii", "county_name_all", "county_fips_all"])
 
 
 

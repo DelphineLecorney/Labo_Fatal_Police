@@ -164,7 +164,7 @@
         "kind": 5,
         "importPath": "clean_dw",
         "description": "clean_dw",
-        "peekOfCode": "df_fatal['flee'] = df_fatal['flee'].replace(np.nan, \"undetermined\")\ndf_fatal['flee'].isnull().sum()\ndf_us_cities = pd.read_sql(\"SELECT * FROM [us_cities]\", cnxn)\ndf_us_cities.isnull().sum().sum()\ndf_us_cities['zips'] = df_us_cities['zips'].fillna(0)\ndf_us_cities.isnull().sum().sum()\ndf_us_cities = df_us_cities.drop(columns=[\"military\", \"timezone\", \"incorporated\", \"source\", \"ranking\", \"city_ascii\", \"state_id\", \"county_name_all\", \"county_fips_all\"])\ndf_Etnicity = pd.read_sql(\"SELECT * FROM [Etnicity]\", cnxn)",
+        "peekOfCode": "df_fatal['flee'] = df_fatal['flee'].replace(np.nan, \"undetermined\")\ndf_fatal['flee'].isnull().sum()\ndf_us_cities = pd.read_sql(\"SELECT * FROM [us_cities]\", cnxn)\ndf_us_cities.isnull().sum().sum()\ndf_us_cities['zips'] = df_us_cities['zips'].fillna(0)\ndf_us_cities.isnull().sum().sum()\ndf_us_cities = df_us_cities.drop(columns=[\"military\", \"timezone\", \"incorporated\", \"source\", \"ranking\", \"city_ascii\", \"county_name_all\", \"county_fips_all\"])\ndf_Etnicity = pd.read_sql(\"SELECT * FROM [Etnicity]\", cnxn)",
         "detail": "clean_dw",
         "documentation": {}
     },
@@ -173,7 +173,7 @@
         "kind": 5,
         "importPath": "clean_dw",
         "description": "clean_dw",
-        "peekOfCode": "df_us_cities = pd.read_sql(\"SELECT * FROM [us_cities]\", cnxn)\ndf_us_cities.isnull().sum().sum()\ndf_us_cities['zips'] = df_us_cities['zips'].fillna(0)\ndf_us_cities.isnull().sum().sum()\ndf_us_cities = df_us_cities.drop(columns=[\"military\", \"timezone\", \"incorporated\", \"source\", \"ranking\", \"city_ascii\", \"state_id\", \"county_name_all\", \"county_fips_all\"])\ndf_Etnicity = pd.read_sql(\"SELECT * FROM [Etnicity]\", cnxn)\ndf_Etnicity.isnull().sum().sum()\nfrom secret import cndw\ndf_fatal.to_sql(\"df_fatal\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)",
+        "peekOfCode": "df_us_cities = pd.read_sql(\"SELECT * FROM [us_cities]\", cnxn)\ndf_us_cities.isnull().sum().sum()\ndf_us_cities['zips'] = df_us_cities['zips'].fillna(0)\ndf_us_cities.isnull().sum().sum()\ndf_us_cities = df_us_cities.drop(columns=[\"military\", \"timezone\", \"incorporated\", \"source\", \"ranking\", \"city_ascii\", \"county_name_all\", \"county_fips_all\"])\ndf_Etnicity = pd.read_sql(\"SELECT * FROM [Etnicity]\", cnxn)\ndf_Etnicity.isnull().sum().sum()\nfrom secret import cndw\ndf_fatal.to_sql(\"df_fatal\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)",
         "detail": "clean_dw",
         "documentation": {}
     },
@@ -182,7 +182,7 @@
         "kind": 5,
         "importPath": "clean_dw",
         "description": "clean_dw",
-        "peekOfCode": "df_us_cities['zips'] = df_us_cities['zips'].fillna(0)\ndf_us_cities.isnull().sum().sum()\ndf_us_cities = df_us_cities.drop(columns=[\"military\", \"timezone\", \"incorporated\", \"source\", \"ranking\", \"city_ascii\", \"state_id\", \"county_name_all\", \"county_fips_all\"])\ndf_Etnicity = pd.read_sql(\"SELECT * FROM [Etnicity]\", cnxn)\ndf_Etnicity.isnull().sum().sum()\nfrom secret import cndw\ndf_fatal.to_sql(\"df_fatal\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_us_cities.to_sql(\"df_us_cities\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_Etnicity.to_sql(\"df_Etnicity\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)",
+        "peekOfCode": "df_us_cities['zips'] = df_us_cities['zips'].fillna(0)\ndf_us_cities.isnull().sum().sum()\ndf_us_cities = df_us_cities.drop(columns=[\"military\", \"timezone\", \"incorporated\", \"source\", \"ranking\", \"city_ascii\", \"county_name_all\", \"county_fips_all\"])\ndf_Etnicity = pd.read_sql(\"SELECT * FROM [Etnicity]\", cnxn)\ndf_Etnicity.isnull().sum().sum()\nfrom secret import cndw\ndf_fatal.to_sql(\"df_fatal\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_us_cities.to_sql(\"df_us_cities\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_Etnicity.to_sql(\"df_Etnicity\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)",
         "detail": "clean_dw",
         "documentation": {}
     },
@@ -191,7 +191,7 @@
         "kind": 5,
         "importPath": "clean_dw",
         "description": "clean_dw",
-        "peekOfCode": "df_us_cities = df_us_cities.drop(columns=[\"military\", \"timezone\", \"incorporated\", \"source\", \"ranking\", \"city_ascii\", \"state_id\", \"county_name_all\", \"county_fips_all\"])\ndf_Etnicity = pd.read_sql(\"SELECT * FROM [Etnicity]\", cnxn)\ndf_Etnicity.isnull().sum().sum()\nfrom secret import cndw\ndf_fatal.to_sql(\"df_fatal\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_us_cities.to_sql(\"df_us_cities\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_Etnicity.to_sql(\"df_Etnicity\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)",
+        "peekOfCode": "df_us_cities = df_us_cities.drop(columns=[\"military\", \"timezone\", \"incorporated\", \"source\", \"ranking\", \"city_ascii\", \"county_name_all\", \"county_fips_all\"])\ndf_Etnicity = pd.read_sql(\"SELECT * FROM [Etnicity]\", cnxn)\ndf_Etnicity.isnull().sum().sum()\nfrom secret import cndw\ndf_fatal.to_sql(\"df_fatal\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_us_cities.to_sql(\"df_us_cities\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)\ndf_Etnicity.to_sql(\"df_Etnicity\", cndw , schema=None, if_exists='replace', index=True, index_label= None, chunksize = None , dtype = None , method = None)",
         "detail": "clean_dw",
         "documentation": {}
     },
